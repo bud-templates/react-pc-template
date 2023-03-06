@@ -1,36 +1,34 @@
 import React from 'react'
-import { RouteProps, useNavigate } from 'react-router-dom'
-import { Button, message, Form, Input } from 'antd'
-import useSWRMutation from 'swr/mutation'
+import { RouteProps } from 'react-router-dom'
+import { Button, Form, Input } from 'antd'
 import style from './index.module.scss'
 import { useValidate } from './hook'
-import { storageLoginInfo } from 'utils/auth'
 // import { accountLogin, UserLoginResp } from 'services/account'
-import { getEncryptPassword } from 'utils/encrypt'
+// import { getEncryptPassword } from 'utils/encrypt'
 
 type RoutesProps = RouteProps & {
   key?: string
 }
 
-interface UserInfo {
-  username: string
-  password: string
-}
+// interface UserInfo {
+//   username: string
+//   password: string
+// }
 
 // todo: 根据项目业务修改
 const Login: React.FunctionComponent<RoutesProps> = () => {
-  const navigator = useNavigate()
+  // const navigator = useNavigate()
   const { validateUsername, validatePassword } = useValidate()
   // const { trigger, isMutating } = useSWRMutation('/op/auth/login', async (url, { arg }) => await accountLogin(arg))
 
-  const handleLoginSuccess = (result: any, uid: string) => {
-    // const { token, realName, opRole } = result || {}
-    // storageLoginInfo({ token, uid, realName, opRole })
-    // message.success('登录成功')
-    // navigator('/')
-  }
+  // const handleLoginSuccess = (result: any, uid: string) => {
+  // const { token, realName, opRole } = result || {}
+  // storageLoginInfo({ token, uid, realName, opRole })
+  // message.success('登录成功')
+  // navigator('/')
+  // }
 
-  const onFinish = async (values: UserInfo) => {
+  const onFinish = async () => {
     // values.password = getEncryptPassword(values.password)
     // const res = await trigger(values)
     // res?.token && handleLoginSuccess(res, values.username)

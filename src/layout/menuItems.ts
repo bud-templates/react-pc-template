@@ -1,5 +1,5 @@
 import React from 'react'
-import { SettingOutlined, DesktopOutlined, VideoCameraOutlined } from '@ant-design/icons'
+import { DesktopOutlined } from '@ant-design/icons'
 import { MenuProps } from 'antd'
 
 // type MenuItem = Required<MenuProps>['items'][number]

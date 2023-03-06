@@ -1,7 +1,6 @@
 import axios from 'axios'
 import { message } from 'antd'
 import { getToken, getUid, removeStoreByLogout } from 'utils/auth'
-import { Env } from 'utils/index'
 
 enum RES_CODE {
   Success = 0,
