@@ -1,21 +1,22 @@
 const path = require('path')
 const fs = require('fs')
-const getPublicUrlOrPath = require('react-dev-utils/getPublicUrlOrPath')
+// const getPublicUrlOrPath = require('react-dev-utils/getPublicUrlOrPath')
 
 const appDirectory = fs.realpathSync(process.cwd())
 const resolveApp = (relativePath) => path.resolve(appDirectory, relativePath)
 
 const reactAppEnv = process.env.REACT_APP_ENV
-const publicPath = reactAppEnv !== 'prod' ? `bud-web3tool/${reactAppEnv}` : ''
+// todo:
+// const publicPath = reactAppEnv !== 'prod' ? `bud-web3tool/${reactAppEnv}` : ''
 
-const publicUrlOrPath = getPublicUrlOrPath(
-  process.env.NODE_ENV === 'development',
-  process.env.NODE_ENV === 'production' ? publicPath : '',
-  process.env.PUBLIC_URL,
-)
+// const publicUrlOrPath = getPublicUrlOrPath(
+//   process.env.NODE_ENV === 'development',
+//   process.env.NODE_ENV === 'production' ? publicPath : '',
+//   process.env.PUBLIC_URL,
+// )
 
 module.exports = {
-  publicUrlOrPath,
+  // publicUrlOrPath,
   appPublic: resolveApp('public'),
   appHtml: resolveApp('public/index.html'),
   appPackageJson: resolveApp('package.json'),

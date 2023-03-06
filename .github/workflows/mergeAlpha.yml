@@ -1,0 +1,26 @@
+name: schedule auto merge alpha
+
+on:
+  workflow_dispatch:
+
+jobs:
+  merge-alpha:
+
+    name: Merge master into alpha
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - run: |
+          sudo chown -R root:root $GITHUB_WORKSPACE
+
+      - name: Action-Automerge
+        uses: robotology/gh-action-nightly-merge@v1.3.1
+        with:
+          development_branch: 'alpha'
+          stable_branch: 'master'
+          allow_ff: false
+          allow_forks: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.XIEZIFENG }}

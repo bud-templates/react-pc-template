@@ -14,7 +14,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
+    "typeRoots": ["./typings/*.d.ts", "node_modules/@types"],
+    "jsx": "react-jsx", // 这里改成react-jsx，就不需要在tsx文件中手动引入React了
     "baseUrl": ".",
     "paths": {
       "services/*": ["src/services/*"],
@@ -29,5 +30,5 @@
       "assets/*": ["src/assets/*"]
     }
   },
-  "include": ["src"]
+  "include": ["src", "./typings/*.d.ts"]
 }

@@ -6,8 +6,8 @@ interface ITestToolProps {}
 
 const TestTool: React.FunctionComponent<ITestToolProps> = () => {
   return (
-    <div className={style.tooltest}>
-      <div>tool test</div>
+    <div className={style?.tooltest}>
+      <div>tool test 3</div>
       <DatePicker />
     </div>
   )
