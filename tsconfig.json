@@ -28,7 +28,13 @@
       "styles/*": ["src/styles/*"],
       "utils/*": ["src/utils/*"],
       "assets/*": ["src/assets/*"]
-    }
+    },
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": { "goToDefinition": true }
+      }
+    ]
   },
   "include": ["src", "./typings/*.d.ts"]
 }

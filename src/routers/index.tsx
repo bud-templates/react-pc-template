@@ -1,9 +1,9 @@
 import React, { ReactNode, Suspense, useEffect } from 'react'
-import NotFound from 'components/NotFound'
 import { Spin } from 'antd'
 import { Route, Routes, useNavigate, RouteObject, HashRouter as Router } from 'react-router-dom'
 import DefaultLayout from '../layout'
-import storage from 'utils/customStorage'
+import NotFound from 'components/NotFound'
+// import storage from 'utils/customStorage'
 
 type RoutesProps = RouteObject & {
   key?: string
@@ -36,7 +36,7 @@ export const routes: RoutesProps[] = [
 
 const RequireLogin: React.FunctionComponent<IDefaultLayoutProps> = (props) => {
   const { children, route } = props
-  // todo:
+  //  todo:
   // const token = storage.getItem('token')
   const token = 'true'
   const navigator = useNavigate()
