@@ -18,7 +18,7 @@ body {
     '微软雅黑', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 
-  // color: var(--font-color);
+  //   color: var(--font-color);
 }
 
 a {
@@ -62,4 +62,8 @@ hr {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+#root {
+  height: 100%;
 }

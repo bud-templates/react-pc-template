@@ -1,0 +1,61 @@
+.trigger {
+  padding: 0 16px;
+  font-size: 18px;
+  line-height: 64px;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.trigger:hover {
+  color: #1890ff;
+}
+
+.envTag {
+  vertical-align: middle;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  margin: 16px;
+  color: #fff;
+
+  // background: rgb(255 255 255 / 30%);
+
+  .logoImg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .logoText {
+    margin-left: 16px;
+    font-size: 24px;
+    font-weight: 800;
+  }
+}
+
+@mixin site-layout-background {
+  background: #fff !important;
+}
+
+.site {
+  height: 100%;
+}
+
+.siteLayoutHeader {
+  @include site-layout-background;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .usernameBtn {
+    margin-right: 16px;
+  }
+}
+
+.siteLayoutContent {
+  @include site-layout-background;
+}
