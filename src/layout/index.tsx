@@ -53,6 +53,7 @@ const DefaultLayout: React.FunctionComponent<unknown> = () => {
         <Sider trigger={null} collapsible collapsed={collapsed}>
           <div className={style.logo}>
             <img className={style.logoImg} src={logoPng} alt='' />
+            {/* todo */}
             <span className={style.logoText} style={{ display: collapsed ? 'none' : 'inline-block' }}>
               My Title
             </span>
@@ -61,7 +62,7 @@ const DefaultLayout: React.FunctionComponent<unknown> = () => {
             theme='dark'
             mode='inline'
             selectedKeys={selectedKeys}
-            defaultOpenKeys={['/contract']}
+            defaultOpenKeys={['/template']} //todo
             items={getMenuItems()}
             onClick={handleMenuClick}
           />

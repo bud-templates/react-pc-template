@@ -6,7 +6,7 @@ import { MenuProps } from 'antd'
 
 const menuItems: MenuProps['items'] = [
   {
-    key: '/',
+    key: '/template',
     icon: React.createElement(DesktopOutlined),
     label: '一级菜单',
     children: [
