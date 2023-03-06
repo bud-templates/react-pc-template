@@ -45,7 +45,7 @@ const Login: React.FunctionComponent<RoutesProps> = () => {
         src='https://buddy-app-bucket.s3-accelerate.amazonaws.com/bud-webtool-us-test/assets/dashboard@2x.46643101.png'
       />
       <div className={style.loginBody}>
-        <p className={style.formTitle}>Project Title</p>
+        <p className={style.formTitle}>Project Title todo:</p>
         <Form
           name='basic'
           layout='vertical'
