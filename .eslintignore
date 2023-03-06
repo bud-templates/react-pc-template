@@ -1,0 +1,6 @@
+*.stories.jsx
+build/
+scripts/
+commitlint.config.js
+babel.config.js
+node_modules
