@@ -19,6 +19,11 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, State> {
     this.setState({ error, errorInfo })
   }
 
+  static getDerivedStateFromError(error: Error) {
+    // 捕获react渲染错误
+    console.log(error)
+  }
+
   handleReload = () => {
     this.setState({
       error: null,
@@ -32,9 +37,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, State> {
       return (
         <div>
           出错了，你可以尝试
-          <button onClick={this.handleReload}>
-            {text ? text : '重新加载'}
-          </button>
+          <button onClick={this.handleReload}>{text ? text : '重新加载'}</button>
         </div>
       )
     }

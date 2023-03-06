@@ -1,13 +1,25 @@
+import { Button, Result } from 'antd'
 import React from 'react'
-import styles from './index.module.scss'
+import { useNavigate } from 'react-router-dom'
 
 interface IProps {}
 
 const NotFound: React.FC<IProps> = () => {
+  const navigator = useNavigate()
+  const handleBackHome = () => {
+    navigator('/')
+  }
   return (
-    <div className={styles.notFound}>
-      <div className={styles.title}>404 页面不存在</div>
-    </div>
+    <Result
+      status='404'
+      title='404'
+      subTitle='Sorry, the page you visited does not exist.'
+      extra={
+        <Button type='primary' onClick={handleBackHome}>
+          Back Home
+        </Button>
+      }
+    />
   )
 }
 
